@@ -1,0 +1,145 @@
+/*Header*/
+
+.header {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /*centers the text horizontally within header*/
+  margin: 20px
+}
+
+/*Styles for the title*/
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  display:flex;
+  margin:0;
+}
+
+.title-to {
+  color:#6a0dad;
+}
+
+.title-do {
+  color: #007bb5;
+}
+
+.header p {
+  font-size: 20px;
+  font-weight: 600;
+  color:black
+}
+
+/*Input field and Add Button*/
+
+.todoinput{
+  display:flex; /* turns the container into a flex container*/
+  flex-direction: column;
+  gap : 5px;
+}
+
+.todoinput input {
+  padding: 5px;
+  border: 2px solid
+}
+
+.todoinput button {
+  background-color: #61dafb;
+}
+
+/* Todo component */
+.todo-item {
+ display : flex ;
+ gap : 1rem;
+ align-items: center;
+ cursor: pointer;
+}
+
+/* Styling for the delete button as a trash icon */
+.delete-icon {
+  background: none; /* Remove default button styling */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Flex display for centering */
+  align-items: center; /* Vertically center the icon */
+  justify-content: center; /* Horizontally center the icon */
+}
+
+.delete-icon svg.size-6 {
+  width: 24px; /* Set the width of the icon */
+  height: 24px; /* Set the height of the icon */
+  color: #ec2e27; /* Set the color of the icon */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.delete-icon:hover svg.size-6 {
+  color: #e6a10e; /* Darker red on hover */
+}
+
+/*CheckBox*/
+
+/*original-checkbox*/
+.check-box {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Custom checkbox styling */
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: white; 
+  border: 2px solid #ccc; 
+  border-radius: 5px; 
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox:hover {
+  background-color: #35E07D;
+}
+
+.custom-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check-box:checked + .custom-checkbox:after {
+  display:block;
+}
+
+.check-box:checked + .custom-checkbox:before {
+  content: '\002714';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/*list component*/
+li {
+  display: flex;
+  justify-content: space-between; 
+  gap: 100px;
+  padding: 15px;
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: #61dafb;  
+}
+
+.todo-completed {
+  text-decoration : line-through;
+  opacity : 0.6;
+}
+
+
